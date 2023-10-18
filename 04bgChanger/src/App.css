@@ -1,0 +1,130 @@
+#root {
+  text-align: center;
+  overflow: hidden;
+  --hormargin:1rem;
+}
+.container{
+  background-color: whitesmoke;
+  height: 97.5vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+ 
+}
+.mainScreen{
+  width: 90%;
+  height: 80%;
+  padding: 1rem;
+}
+
+button{
+  --_btntextcolor:var(--btntextcolor,black);
+  width: 8rem;
+  background: whitesmoke;
+  color: var(--_btntextcolor);
+  font-size: larger;
+  font-weight: 500;
+  border-radius: 1rem;
+  padding: .8rem;
+  display: inline-block;
+}
+
+button:hover{
+  animation-name: button-animation-two;
+  animation-duration: 0.09s;
+}
+
+@keyframes button-animation{
+  0%{
+    transform:rotate3d(1,0,0,30deg)
+  }
+  50%{
+    transform:rotate3d(0,1,0,30deg)
+  }
+  100%{
+    transform: rotate3d(0,0,1,30deg)
+  }
+}
+
+@keyframes button-animation-two{
+  0%{
+    transform: rotate3d(0,0,1,0deg)
+  }
+  33%{
+    transform: rotate3d(0,0,1,1deg)
+  }
+  45%{
+    transform: rotate3d(0,0,1,-2deg)
+  }
+  100%{
+    transform: rotate3d(0,0,1,0deg)
+  }
+}
+
+.btn-red{
+  --btntextcolor:olive;
+}
+
+.btn-red{
+  --btntextcolor:red;
+}
+
+.btn-green{
+  --btntextcolor:green;
+}
+
+.btn-brown{
+  --btntextcolor:brown;
+}
+.btn-blue{
+  --btntextcolor:blue;
+}
+
+.buttonGrp{
+  display: flex;
+  flex-direction:row;
+  width:90%;
+  margin-top: 1rem;
+  justify-content: space-between;
+  margin-left: var(--hormargin,0rem);
+  margin-right:var(--hormargin,0rem);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
