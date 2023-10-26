@@ -1,0 +1,20 @@
+.copyButton:hover{
+    animation-name: button-animation-two;
+    animation-duration: 0.1s;
+    background-color:  rgb(2, 79, 123);
+}
+
+@keyframes button-animation-two{
+    0%{
+      transform: rotate3d(0,0,1,0deg)
+    }
+    33%{
+      transform: rotate3d(0,0,1,2deg)
+    }
+    45%{
+      transform: rotate3d(0,0,1,-2deg)
+    }
+    100%{
+      transform: rotate3d(0,0,1,0deg)
+    }
+  }
